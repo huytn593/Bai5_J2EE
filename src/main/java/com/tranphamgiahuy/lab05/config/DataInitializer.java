@@ -1,7 +1,7 @@
-package com.nguyenthanhtai.lab05.config;
+package com.tranphamgiahuy.lab05.config;
 
-import com.nguyenthanhtai.lab05.model.Category;
-import com.nguyenthanhtai.lab05.repository.CategoryRepository;
+import com.tranphamgiahuy.lab05.model.Category;
+import com.tranphamgiahuy.lab05.repository.CategoryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -24,8 +24,7 @@ public class DataInitializer implements CommandLineRunner {
                     new Category(null, "History"),
                     new Category(null, "Self-Help"),
                     new Category(null, "Programming"),
-                    new Category(null, "Business & Economics")
-            ));
+                    new Category(null, "Business & Economics")));
             System.out.println("✅ Sample categories seeded into database.");
         }
     }

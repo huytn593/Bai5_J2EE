@@ -1,4 +1,4 @@
-package com.nguyenthanhtai.lab05.model;
+package com.tranphamgiahuy.lab05.model;
 
 import jakarta.persistence.*;
 import lombok.Data;

@@ -1,9 +1,9 @@
-package com.nguyenthanhtai.lab05.controller;
+package com.tranphamgiahuy.lab05.controller;
 
-import com.nguyenthanhtai.lab05.model.Book;
-import com.nguyenthanhtai.lab05.model.Category;
-import com.nguyenthanhtai.lab05.service.BookService;
-import com.nguyenthanhtai.lab05.service.CategoryService;
+import com.tranphamgiahuy.lab05.model.Book;
+import com.tranphamgiahuy.lab05.model.Category;
+import com.tranphamgiahuy.lab05.service.BookService;
+import com.tranphamgiahuy.lab05.service.CategoryService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -48,7 +48,7 @@ public class BookController {
     // ========================
     @GetMapping("/edit/{id}")
     public String showEditForm(@PathVariable Long id, Model model,
-                               RedirectAttributes redirectAttributes) {
+            RedirectAttributes redirectAttributes) {
         try {
             Book book = bookService.findById(id);
             model.addAttribute("book", book);
@@ -66,10 +66,10 @@ public class BookController {
     // ========================
     @PostMapping("/save")
     public String saveBook(@Valid @ModelAttribute("book") Book book,
-                           BindingResult result,
-                           @RequestParam("categoryId") Long categoryId,
-                           Model model,
-                           RedirectAttributes redirectAttributes) {
+            BindingResult result,
+            @RequestParam("categoryId") Long categoryId,
+            Model model,
+            RedirectAttributes redirectAttributes) {
         if (result.hasErrors()) {
             model.addAttribute("categories", categoryService.findAll());
             model.addAttribute("pageTitle",

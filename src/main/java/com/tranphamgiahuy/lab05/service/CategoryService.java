@@ -1,7 +1,7 @@
-package com.nguyenthanhtai.lab05.service;
+package com.tranphamgiahuy.lab05.service;
 
-import com.nguyenthanhtai.lab05.model.Category;
-import com.nguyenthanhtai.lab05.repository.CategoryRepository;
+import com.tranphamgiahuy.lab05.model.Category;
+import com.tranphamgiahuy.lab05.repository.CategoryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
